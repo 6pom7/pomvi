@@ -113,10 +113,18 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- Window commands
+-- Buffer commands
+vim.keymap.set('n', '<leader>bn', ':bn<CR>', { desc = '[N]ext' })
+vim.keymap.set('n', '<leader>bp', ':bp<CR>', { desc = '[P]revious' })
+
+-- Window commands like doom emacs
 vim.keymap.set('n', '<leader>wc', ':close<CR>', { desc = '[C]lose' })
 vim.keymap.set('n', '<leader>wh', ':split<CR>', { desc = 'Split [H]orzontally' })
 vim.keymap.set('n', '<leader>wv', ':vsplit<CR>', { desc = 'Split [V]ertically' })
+vim.keymap.set('n', '<leader>wh', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<leader>wl', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<leader>wj', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<leader>wk', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Save file
 vim.keymap.set('n', '<leader>fs', ':w<CR>', { desc = '[S]ave File' })
@@ -267,6 +275,7 @@ require('lazy').setup({
         { '<leader>f', group = '[F]ile' },
         { '<leader>c', group = '[C]ode' },
         { '<leader>w', group = '[W]indow' },
+        { '<leader>b', group = '[B]uffer' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
