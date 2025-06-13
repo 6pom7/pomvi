@@ -278,7 +278,7 @@ require('lazy').setup({
         { '<leader>w', group = '[W]indow' },
         { '<leader>b', group = '[B]uffer' },
         { '<leader>t', group = '[T]oggle' },
-        { '<leader>m', group = 'Har[p]oon' },
+        { '<leader>p', group = 'Har[p]oon' },
         { '<leader>H', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
     },

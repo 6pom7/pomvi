@@ -2,8 +2,8 @@ local mark = require 'harpoon.mark'
 local ui = require 'harpoon.ui'
 
 return {
-  vim.keymap.set('n', '<leader>pa', mark.add_file),
-  vim.keymap.set('n', '<leader>pm', ui.toggle_quick_menu),
+  vim.keymap.set('n', '<leader>pa', mark.add_file, { desc = '[A]dd File' }),
+  vim.keymap.set('n', '<leader>pm', ui.toggle_quick_menu, { desc = '[M]enu' }),
 
   -- Move to given window
   vim.keymap.set('n', '<leader>p1', function()
